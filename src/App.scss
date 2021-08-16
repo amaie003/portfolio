@@ -1,0 +1,27 @@
+@import "./styles/variables.scss";
+@import "./styles/buttons.scss";
+
+@import "./support/Montserrat_web/stylesheet.css";
+
+.app{
+    font-family: "montserratmedium";
+    height:100%;
+    width:100%;
+    margin:0;
+    position: fixed;
+    left:0;
+    top:0;
+    display:grid;
+    grid-template-columns: $navWidth 1fr;
+    grid-template-rows: 1fr;
+    scroll-behavior: smooth;
+}
+
+
+.nav{
+    grid-column: 1/2;
+
+}
+.main{
+    grid-column: 2/3;
+}

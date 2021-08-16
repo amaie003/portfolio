@@ -1,0 +1,118 @@
+@import './variables.scss';
+
+
+.main-container{
+    overflow-y:scroll;
+    background-color:$mainBG;
+    position: relative;
+    
+}
+.main-contact_button{
+    font-size:14pt;
+    margin-top: 2em;
+    animation-duration: 2s;
+     animation-name: contactGlow;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+}
+.main-contact_button:hover{
+    animation-name: none;
+}
+
+@keyframes contactGlow {
+    0%{
+        color:white;
+        text-shadow: 0 0 10px $blue,0 0 20px $blue,0 0 30px $blue;
+        border-color: white;
+        box-shadow: 0 0 10px $blue,0 0 15px $blue,0 0 15px $blue inset;
+    }
+    
+    
+    100%{
+    color:$blue;
+    text-shadow:none;
+    border-color: $blue;
+    box-shadow: none;
+    }
+    
+}
+.main-main{
+    width:100%;
+    height: 100vh;
+    
+   
+    position: relative;
+    overflow: hidden;
+}
+.main-bg_gradient{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+   
+    background-image: linear-gradient(to right, rgba(23,23,23,0.97),rgba(25,25,25,0.97),rgba(25,25,25,0.95),rgba(25,25,25,0.9));
+    z-index: 2;
+}
+.main-bg{
+    display: block;
+    width: 125%;
+    
+    position: absolute;
+    top:-140%;
+    left:0%;
+    z-index: 1;
+}
+
+
+
+.main-text_zone{
+padding-top: 8rem;
+padding-left:5rem;
+z-index: 3;
+position: relative;
+
+}
+
+.main-main_title{
+color:white;
+font-family: "montserratbold";
+letter-spacing: 0.05rem;
+font-size:4rem;
+display: inline-block;
+position: relative;
+line-height: 0px;
+}
+.main-sub_title{
+    color:$gray;
+    font-family: "montserratlight";
+
+    letter-spacing: 0.05rem;
+    font-size:1.2rem;
+    display: inline-block;
+    position: relative;
+  
+    
+ }
+ .main-sub_title_element{
+   padding-right:1em;
+   
+ }
+ .main-sub_title_seperater{
+    padding-right:1em;  
+ }
+ 
+ .main-container::-webkit-scrollbar {
+     width: 12px;
+     background-color: none;
+ }
+ 
+ .main-container::-webkit-scrollbar-track {
+     
+  
+ }
+ 
+ .main-container::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 16px rgba(197, 197, 197, 0.5); 
+ }

@@ -1,0 +1,49 @@
+@import './variables.scss';
+$navShadow:-10px 0px 10px rgb(23,23,23) inset;
+.nav-main{
+    background-color:$navBG;
+    box-shadow: $navShadow;
+    letter-spacing: 2px;
+    color: $gray;
+    display:flex;
+    flex-direction: column;
+}
+
+.nav-menu{
+padding-top:150px;
+padding-left:0;
+position: relative;
+width:100%;
+text-align: center;
+margin: 0;
+
+}
+.nav-menu a{
+    clear: both;
+    float:left;
+    width: 100%;
+    color: $gray;
+    text-decoration: none;
+    padding: 1em 0;
+    border-bottom: solid 1px gray;
+    list-style-type: none;   
+    display:block;
+    
+}
+.nav-menu a:hover{
+background-color: $gray-dark;
+color:white;
+box-shadow: $navShadow,0px -2px 2px rgba(69, 82, 201, 0.5) inset;
+cursor: pointer;
+text-shadow: 
+0px 0px 2px white,
+0px 0px 8px $blue,
+0px 0px 5px $blue,
+0px 0px 10px $blue,
+0px 0px 15px $blue,
+0px 0px 25px $blue,
+0px 0px 30px $blue;
+
+
+}
+
