@@ -21,9 +21,14 @@ class App extends Component {
     <div className="app">
       <Nav className="nav"/>
       <Main className="main"
+      
       mainTitle={this.data["welcome"]["main_title"]}
       mainTitleSub={this.data["welcome"]["main_title_sub"]}
       subTitle= {this.data["welcome"]["sub_title"]}
+      name = {this.data["name"]}
+      para = {this.data["about"]["paragraphs"]}
+      specialties={this.data["about"]["specialties"]}
+      work={this.data["work"]}
       />
     </div>
   );

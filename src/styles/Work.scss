@@ -1,0 +1,65 @@
+@import "variables.scss";
+@import "./../support/Montserrat_web/stylesheet.css";
+
+.main-body-container{
+background-color: transparent;
+grid-column: 1;
+grid-row: 2;
+display:grid;
+grid-template-columns: 13em 1fr;
+grid-template-rows:1fr;
+position:relative;
+user-select:text;
+}
+.main-work-menu ul{
+    margin-top: 1.5em;
+    user-select:none;
+    padding: 0;
+    color:$gray;
+}
+.main-menu-item{
+    margin-bottom:1.2em;
+    text-decoration: none;
+    list-style: none;
+   
+    background-color: transparent;
+}
+.main-menu-item:hover{
+color:white;
+cursor: pointer;
+text-shadow: 0px 0px 2px rgba(255,255,255,0.5),0px 0px 5px $blue;
+}
+
+.highLight-button{
+    cursor: pointer;
+ color:white;
+ margin-bottom:1.2em;
+    text-decoration: none;
+    list-style: none;
+text-shadow: 0px 0px 2px rgba(255,255,255,0.5),0px 0px 5px $blue;
+}
+.main-work-body{
+    background-color: transparent;
+    border-left: solid 1px $gray;
+    padding-left: 1em ;
+}
+.main-work-subTextContainer{ 
+    font-family: montserratextralight,Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width:100%;
+    height: 4em;
+    }
+    .main-work-description{
+    width:100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    }
+    .pushInEffect{
+        font-family: montserratextralight,Arial, Helvetica, sans-serif;
+    
+        background-color: rgba(0,0,0,0.1);
+        box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+

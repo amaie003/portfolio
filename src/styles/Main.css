@@ -1,0 +1,277 @@
+.main-container {
+  overflow-y: scroll;
+  background-color: #1d1d1d;
+  position: relative;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(100vh);
+      scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.main-contact_button {
+  font-size: 14pt;
+  margin-top: 2em;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: contactGlow;
+          animation-name: contactGlow;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.main-contact_button:hover {
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+
+@-webkit-keyframes contactGlow {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px #595bc0, 0 0 20px #595bc0, 0 0 30px #595bc0;
+    border-color: white;
+    -webkit-box-shadow: 0 0 10px #595bc0, 0 0 15px #595bc0, 0 0 15px #595bc0 inset;
+            box-shadow: 0 0 10px #595bc0, 0 0 15px #595bc0, 0 0 15px #595bc0 inset;
+  }
+  100% {
+    color: #595bc0;
+    text-shadow: none;
+    border-color: #595bc0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes contactGlow {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px #595bc0, 0 0 20px #595bc0, 0 0 30px #595bc0;
+    border-color: white;
+    -webkit-box-shadow: 0 0 10px #595bc0, 0 0 15px #595bc0, 0 0 15px #595bc0 inset;
+            box-shadow: 0 0 10px #595bc0, 0 0 15px #595bc0, 0 0 15px #595bc0 inset;
+  }
+  100% {
+    color: #595bc0;
+    text-shadow: none;
+    border-color: #595bc0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.main-main {
+  width: 100%;
+  height: 100vh;
+  white-space: nowrap;
+  -webkit-box-shadow: 0 1px 20px black,0 1px 10px black;
+          box-shadow: 0 1px 20px black,0 1px 10px black;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+@-webkit-keyframes moreArrow {
+  0% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+@keyframes moreArrow {
+  0% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+.main-bg_gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(23, 23, 23, 0.97)), color-stop(rgba(25, 25, 25, 0.97)), color-stop(rgba(25, 25, 25, 0.95)), to(rgba(25, 25, 25, 0.9)));
+  background-image: linear-gradient(to right, rgba(23, 23, 23, 0.97), rgba(25, 25, 25, 0.97), rgba(25, 25, 25, 0.95), rgba(25, 25, 25, 0.9));
+  z-index: 2;
+}
+
+.main-bg {
+  display: block;
+  width: 125%;
+  position: absolute;
+  top: -140%;
+  left: 0%;
+  z-index: 1;
+}
+
+.main-title_name {
+  text-shadow: 0.06em 0.06em 0 #595bc0, 0.05em 0.05em 30px #595bc0;
+}
+
+.main-title_name:hover {
+  text-shadow: 0.06em 0.06em 0 #595bc0, 0 0 30px #595bc0, 0 0 40px #595bc0;
+}
+
+.main-text_zone {
+  padding-top: 8rem;
+  padding-left: 5rem;
+  z-index: 3;
+  position: relative;
+}
+
+.main-main_title {
+  color: white;
+  font-family: "montserratbold", Arial, sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 4rem;
+  display: inline-block;
+  position: relative;
+  line-height: 0px;
+}
+
+.main-sub_title {
+  color: #8d8d8d;
+  font-family: "montserratlight",Arial, sans-serif;
+  letter-spacing: 0.05rem;
+  font-size: 1.2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.main-sub_title_element {
+  padding-right: 1em;
+}
+
+.main-sub_title_seperater {
+  padding-right: 1em;
+}
+
+.main-container::-webkit-scrollbar {
+  width: 12px;
+  background-color: none;
+}
+
+.main-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 16px rgba(197, 197, 197, 0.5);
+}
+
+.main-scroll_indicater {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  z-index: 10;
+}
+
+.main_scroll_text {
+  position: absolute;
+  left: 35px;
+  color: #8d8d8d;
+  font-size: 10pt;
+  top: 15px;
+  -webkit-animation: pulse 2s linear alternate infinite;
+          animation: pulse 2s linear alternate infinite;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.main-down_arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+          transform: scale3d(0.5, 0.5, 0.5);
+}
+
+.main-down_arrow1 {
+  -webkit-animation: move 6s ease-out 1s infinite;
+          animation: move 6s ease-out 1s infinite;
+}
+
+.main-down_arrow2 {
+  -webkit-animation: move 6s ease-out 3s infinite;
+          animation: move 6s ease-out 3s infinite;
+}
+
+.main-down_arrow3 {
+  -webkit-animation: move 6s ease-out 5s infinite;
+          animation: move 6s ease-out 5s infinite;
+}
+
+@-webkit-keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  67% {
+    opacity: 1;
+    -webkit-transform: translateY(18px);
+            transform: translateY(18px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(25px) scale3d(0.5, 0.5, 0.5);
+            transform: translateY(25px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  67% {
+    opacity: 1;
+    -webkit-transform: translateY(18px);
+            transform: translateY(18px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(25px) scale3d(0.5, 0.5, 0.5);
+            transform: translateY(25px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+/*# sourceMappingURL=Main.css.map */

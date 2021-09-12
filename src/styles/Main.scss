@@ -1,12 +1,20 @@
 @import './variables.scss';
 
 
+
 .main-container{
     overflow-y:scroll;
     background-color:$mainBG;
     position: relative;
-    
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+
+
 }
+
+
 .main-contact_button{
     font-size:14pt;
     margin-top: 2em;
@@ -44,6 +52,8 @@
     position: relative;
     overflow: hidden;
     user-select: none;
+    box-sizing: border-box;
+    scroll-snap-align: start;
 }
 
 
@@ -76,8 +86,14 @@
     left:0%;
     z-index: 1;
 }
+.main-title_name{
+    text-shadow: 0.06em 0.06em 0 $blue,0.05em 0.05em 30px $blue;
+}
+.main-title_name:hover{
 
 
+    text-shadow: 0.06em 0.06em 0 $blue,0 0 30px $blue,0 0 40px $blue;
+}
 
 .main-text_zone{
 padding-top: 8rem;
@@ -120,10 +136,10 @@ line-height: 0px;
      background-color: none;
  }
  
- .main-container::-webkit-scrollbar-track {
+ //.main-container::-webkit-scrollbar-track {
      
   
- }
+// }
  
  .main-container::-webkit-scrollbar-thumb {
      border-radius: 10px;

@@ -1,0 +1,9 @@
+@import url(c:\Users\Erfan\Dropbox\My PC (LAPTOP-54L7KT5H)\Desktop\Job\portfolio\src\support\Montserrat_web\stylesheet.css);
+.main-project-container {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 3em;
+  background-color: red;
+}
+/*# sourceMappingURL=Project.css.map */

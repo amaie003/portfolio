@@ -1,0 +1,11 @@
+@import "variables.scss";
+@import "./../support/Montserrat_web/stylesheet.css";
+
+
+.main-project-container{
+display:grid;
+width:100%;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 13em 13em;
+
+}

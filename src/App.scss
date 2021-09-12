@@ -14,7 +14,7 @@
     display:grid;
     grid-template-columns: $navWidth 1fr;
     grid-template-rows: 1fr;
-    scroll-behavior: smooth;
+    
 }
 
 
@@ -24,4 +24,5 @@
 }
 .main{
     grid-column: 2/3;
+  
 }
