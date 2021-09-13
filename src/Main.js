@@ -1,4 +1,4 @@
-import { react, Component } from "react";
+import {Component } from "react";
 import "./styles/Main.scss";
 import "./styles/About.scss";
 import "./styles/Work.scss";
@@ -43,8 +43,8 @@ class Main extends Component {
     }
   };
   handleScroll = () => {
-    if (this.scroller == null) return;
-    const { scrollHeight, scrollTop, clientHeight } = this.scroller;
+    if (this.scroller === null) return;
+    const { scrollTop, clientHeight } = this.scroller;
     if (scrollTop > clientHeight - clientHeight / 3) {
       this.setState({
         shownSpecialty: true,
@@ -72,20 +72,20 @@ class Main extends Component {
               <img
                 className="main-about-specialty-img"
                 alt={
-                  index == 0
+                  index === 0
                     ? `React Web Application`
-                    : index == 1
+                    : index === 1
                     ? `Database Construction`
-                    : index == 2
+                    : index === 2
                     ? `Rest API Development`
                     : ""
                 }
                 src={
-                  index == 0
+                  index === 0
                     ? reactIcon
-                    : index == 1
+                    : index === 1
                     ? databaseIcon
-                    : index == 2
+                    : index === 2
                     ? APIIcon
                     : ""
                 }
@@ -360,6 +360,7 @@ class Main extends Component {
             <br />
             <h2 className="main-sub_title">{this.getsubTitle()}</h2>
             <br />
+
             <a href="mailto:amaie003@ucr.edu" className="main-contact_button blue_button">
               Email Me
             </a>
@@ -372,7 +373,7 @@ class Main extends Component {
               <div className="main-title">About</div>
               <div className="main-title-underline"></div>
             </div>
-            {this.state.shownSpecialty == true && this.specialties()}
+            {this.state.shownSpecialty === true && this.specialties()}
           </div>
         </div>
         <div className="main-screen-block">
