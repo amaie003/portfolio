@@ -17,7 +17,7 @@ export const portfolioData = {
       },
       {
         title: "REST API",
-        body: " To bring front-end and back-end together, I have extended experience in developing REST APIs that not only are optimized, but also is built on a clear structure to reduce the need to frequently checking documentation. I am also familiar with various related tech such as AWS Lambda & API Gateway",
+        body: " To bring front-end and back-end together, I have extended experience in developing REST APIs that are not only optimized, but also built following best practices to reduce the need to check documentation. I am also familiar with various related tech such as AWS Lambda & API Gateway",
       },
     ],
     paragraphs: [
