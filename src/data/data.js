@@ -67,27 +67,7 @@ export const portfolioData = {
     },
   ],
   projects: [
-    {
-      title_short: "ZombieRun",
-      title: "ZombieRun - Pathfinding Visulization & Simulator",
-      logo_img: "./img/ZombieRunLogoTrans.png",
-      tech: "React, JavaScript, HTML, CSS",
-      end: "July 2021",
-      imgs: ["./img/zombiePath1.png"],
-      type: "Frontend, Algorithms",
-      des: [
-        "Built React app to visualize and compare pathfinding algorithms by zombie chase simulation with React, JavaScript, and HTML / CSS",
-        "Implemented Dijkstra Algorithm, A* Algorithm, and KNN Algorithm to path-find to humans, and visualized process using animations",
-      ],
-      links: [
-        { title: "Website", type: "website", url: "https://zombiepath.com/" },
-        {
-          title: "Github",
-          type: "git",
-          url: "https://github.com/amaie003/zombiepath",
-        },
-      ],
-    },
+    
     {
       title_short: "PlanCatcher",
       title: "Productivity Analyzer & Tracker – PlanCatcher",
@@ -112,6 +92,27 @@ export const portfolioData = {
       
       ],
       links: [{ title: "iOS App Store", type: "ios", url: "https://apps.apple.com/us/app/plancatcher-simple-planner/id1447855937" }]
+    },
+    {
+      title_short: "ZombieRun",
+      title: "ZombieRun - Pathfinding Visulization & Simulator",
+      logo_img: "./img/ZombieRunLogoTrans.png",
+      tech: "React, JavaScript, HTML, CSS",
+      end: "July 2021",
+      imgs: ["./img/zombiePath1.png"],
+      type: "Frontend, Algorithms",
+      des: [
+        "Built React app to visualize and compare pathfinding algorithms by zombie chase simulation with React, JavaScript, and HTML / CSS",
+        "Implemented Dijkstra Algorithm, A* Algorithm, and KNN Algorithm to path-find to humans, and visualized process using animations",
+      ],
+      links: [
+        { title: "Website", type: "website", url: "https://zombiepath.com/" },
+        {
+          title: "Github",
+          type: "git",
+          url: "https://github.com/amaie003/zombiepath",
+        },
+      ],
     },
     {
       title_short: "GPU Parallel Computing",
