@@ -5,7 +5,9 @@ import "./styles/Work.scss";
 import "./styles/Project.scss";
 import bgImg from "./img/mainBG.png";
 import { FaChevronDown } from "react-icons/fa";
+import { VscChromeClose } from "react-icons/vsc";
 import { IconContext } from "react-icons";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import reactIcon from "./img/reactIcon.png";
 import databaseIcon from "./img/databaseIcon.png";
 import APIIcon from "./img/APIIcon.png";
@@ -15,6 +17,8 @@ class Main extends Component {
     this.state = {
       shownSpecialty: false,
       selectedWork: 0,
+      selectedProject: -1,
+      selectedScreenShot: 0,
     };
     this.scroller = null;
   }
@@ -145,6 +149,159 @@ class Main extends Component {
       selectedWork: i,
     });
   };
+  changeProjectDetail = (i) => {
+    this.setState({
+      selectedProject: i,
+    });
+  };
+  switchImage=(i,length)=>{
+    if (i>=0 && i < length){
+      this.setState({
+        selectedScreenShot:i
+
+      })
+    }
+
+  }
+
+  projectDetail = () => {
+    var { projects } = this.props;
+
+    if (
+      this.state.selectedProject === -1 ||
+      this.state.selectedProject === null ||
+      this.state.selectedProject === undefined
+    ) {
+      return <div className="main-project-detail"></div>;
+    }
+    var project = projects[this.state.selectedProject];
+    return (
+      <div className="main-project-detail">
+        <div className="main-project-detail-body">
+          <div className="main-project-detail-back-container">
+            <div
+              className="main-project-detail-back"
+              onClick={() => this.changeProjectDetail(-1)}
+            >
+              <IconContext.Provider
+                value={{
+                  color: "white",
+                  size: 30,
+                  className: "main-project-close",
+                }}
+              >
+                <VscChromeClose />
+              </IconContext.Provider>
+            </div>
+          </div>
+          <div className="main-project-detail-content">
+            <h1 className="main-project-detail-title">{project["title"]}</h1>
+            <div className="main-project-detail-info">
+              <div className="main-project-info-item">
+                <b>Tech</b>: {project["tech"]}
+              </div>
+              <div className="main-project-info-item">
+                <b>Type</b>: {project["type"]}
+              </div>
+            
+              <div className="main-project-info-item">
+                <b>Date</b>: {project["end"]}
+              </div>
+            </div>
+            {project["imgs"].length > 0 && (
+              <div className="main-project-detail-screenshot-container">
+                ScreenShots:
+                <div className="main-project-detail-img-container pushInEffect">
+                  <div className="main-project-detail-img">
+                    {this.state.selectedScreenShot>0 &&
+                    <div onClick={()=>this.switchImage(this.state.selectedScreenShot-1,project["imgs"].length)} className="main-project-detail-img-arrow main-project-detail-arrow-left">
+                      <IconContext.Provider
+                        value={{
+                          color: "white",
+                          size: 30,
+                         
+                        }}
+                      >
+                        <BsChevronLeft />
+                      </IconContext.Provider>
+                    </div>
+                    }
+                    <div className="main-project-detail-display-img">
+                      <img
+                        src={
+                          require("" +
+                            project["imgs"][this.state.selectedScreenShot])
+                            .default
+                        }
+                      />
+                    </div>
+
+                   { this.state.selectedScreenShot < project["imgs"].length -1 && 
+                    <div onClick={()=>this.switchImage(this.state.selectedScreenShot+1,project["imgs"].length)} className="main-project-detail-img-arrow main-project-detail-arrow-right">
+                      <IconContext.Provider
+                        value={{
+                          color: "white",
+                          size: 30,
+                         
+                        }}
+                      >
+                        <BsChevronRight />
+                      </IconContext.Provider>
+                    </div>
+                }
+
+                    <div className="main-project-detail-img-position">
+                      {this.state.selectedScreenShot + 1} of{" "}
+                      {project["imgs"].length}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            <ul className="main-project-detail-des pushInEffect">
+                {project["des"].map((key,index)=>(
+                  <li key={"project_detail_item_"+index}>
+                    {key}
+                  </li>
+                ))}
+            </ul>
+            <div className="main-project-detail-buttons">
+              {project["links"].map((key,index)=>(
+                <a className="blue_button" target="_blank" key={"project-detail-button-"+index} href={key["url"]} >{key["title"]}</a>
+              ))
+           
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  projectGrid = () => {
+    var { projects } = this.props;
+    return projects.map((key, index) => (
+      <div
+        className="main-project-grid-item pushInEffect"
+        onClick={() => this.changeProjectDetail(index)}
+        key={"projectItem-" + index}
+      >
+        <div className="main-project-icon-container">
+          <img
+            className="main-project-icon"
+            src={require("" + key["logo_img"]).default}
+            alt={key["title_short"]}
+          />
+          <div className="main-project-grid-item-title-container">
+            <div className="main-project-grid-item-title">
+              {key["title_short"]}
+            </div>
+          </div>
+        </div>
+      </div>
+    ));
+  };
+
   render() {
     var { work } = this.props;
     return (
@@ -203,9 +360,9 @@ class Main extends Component {
             <br />
             <h2 className="main-sub_title">{this.getsubTitle()}</h2>
             <br />
-            <button className="main-contact_button blue_button">
+            <a href="mailto:amaie003@ucr.edu" className="main-contact_button blue_button">
               Email Me
-            </button>
+            </a>
           </div>
         </div>
         <div className="main-screen-block">
@@ -278,6 +435,10 @@ class Main extends Component {
           </div>
         </div>
         <div className="main-screen-block">
+          {this.state.selectedProject !== -1 &&
+            this.state.selectedProject !== null &&
+            this.state.selectedProject !== undefined &&
+            this.projectDetail(this.state.projectDetail)}
           <div className="main-textBox">
             <div className="main-title-container">
               <a id="project"></a>
@@ -285,7 +446,7 @@ class Main extends Component {
               <div className="main-title-underline"></div>
             </div>
 
-            <div className="main-project-container">asd</div>
+            <div className="main-project-container">{this.projectGrid()}</div>
           </div>
         </div>
       </div>

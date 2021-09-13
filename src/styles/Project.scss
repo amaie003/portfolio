@@ -5,7 +5,228 @@
 .main-project-container{
 display:grid;
 width:100%;
+grid-column-gap:1em;
+grid-row-gap:1em;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 13em 13em;
+grid-template-rows: 1fr 1fr;
 
 }
+
+.main-project-detail-back-container{
+    
+    width:100px;
+    padding-top:0.8em;
+    padding-left:1em;
+    
+}
+.main-project-detail-buttons a{
+background-color: transparent;
+text-decoration: none;
+margin-right: 1em;
+}
+
+.main-project-detail-buttons{
+
+    margin-bottom:1em;
+    padding:1em 0;
+}
+.main-project-close{
+    cursor: pointer;
+    color:blue;
+    
+}
+
+
+.main-project-detail{
+overflow-y: scroll;
+width:95%;
+position: absolute;
+left:5%;
+height: 100%;
+z-index: 120;
+background-color: $gray-dark;
+box-shadow: -10px 0 15px black;
+animation-duration: 0.3s;
+animation-name: projectslidein;
+animation-iteration-count:1;
+animation-fill-mode:forwards;
+
+display:grid;
+grid-template-columns: 1em 1fr 1em;
+grid-template-rows: 1em 1fr 1em;
+}
+.main-project-detail-des{
+padding-top:1em;
+padding-bottom:1em;
+}
+.main-project-detail-des li{
+    margin-bottom: 0.5em;
+}
+.main-project-detail-arrow-left{
+grid-column: 1;
+}
+.main-project-detail-arrow-right{
+grid-column: 3;
+}
+.main-project-detail::-webkit-scrollbar {
+    width: 12px;
+    background-color: none;
+}
+.main-project-detail-img-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.main-project-detail-screenshot-container{
+    margin-top:1em;
+    
+}
+.main-project-detail-img{
+    margin-top: 1em;
+    display:grid;
+    grid-template-rows: 1fr 2em;
+    grid-template-columns: 2em 1fr 2em;
+    width:50%;
+    font-family: montserratextralight,Arial, Helvetica, sans-serif;
+}
+.main-project-detail-img-position{
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    padding: 1em;
+}
+.main-project-detail-img img{
+width:100%;
+
+}
+.main-project-detail-display-img{
+    grid-row: 1;
+grid-column: 2;
+}
+.main-project-detail-img-arrow{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-project-detail-img-arrow:hover{
+cursor: pointer;
+background-color: rgba(255,255,255,0.2);
+}
+
+.main-project-detail::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 16px rgba(197, 197, 197, 0.5); 
+}
+
+.main-project-detail-body{
+    grid-row:2/3;
+    grid-column: 2/3;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 1fr;
+}
+.main-project-icon{
+
+width:90%;
+
+}
+.main-project-detail-content{
+grid-row:2;
+grid-column: 1;
+display:flex;
+flex-direction: column;
+
+
+}
+.main-project-detail-title{
+margin-top:1em;
+font-size:1.5em;
+
+
+}
+.main-project-detail-info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap:1em;
+    font-family: montserratextralight,Arial, Helvetica, sans-serif;
+}
+
+
+.main-project-grid-item{
+display:flex;
+flex-direction: column;
+
+
+}
+.main-project-icon-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1em;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+
+
+.main-project-grid-item-title-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width:90%;
+height:100%;
+z-index:100;
+position: absolute;
+left:5%;
+top:0;
+background-color: rgba(0,0,0,0.4);
+font-family: montserratblack,Arial, Helvetica, sans-serif;
+color:white;
+font-size:1.3em;
+letter-spacing: 2px;
+text-align: center;
+opacity: 0;
+}
+.main-project-grid-item-title-container:hover{
+    
+    animation-duration: 0.5s;
+    animation-name: fadein;
+    cursor: pointer;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+}
+
+
+
+@keyframes projectslidein {
+    0%{
+        
+        left:100%;
+    }
+    100%{
+        
+        left:5%;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity:1;
+        background-color: rgba(0,0,0,0.3);
+        text-shadow: 0px 0px 3px rgba(255,255,255,0.6),0px 0px 15px $blue;
+
+    }
+
+    40%{
+        background-color: rgba(0,0,0,0.45);
+        text-shadow: 0px 0px 4px rgba(255,255,255,0.9),0px 0px 15px $blue;
+
+       
+    }
+    100%{
+        background-color: rgba(0,0,0,0.4);
+        opacity:1;
+        text-shadow: 0px 0px 3px rgba(255,255,255,0.5),0px 0px 15px $blue;
+    }
+  }

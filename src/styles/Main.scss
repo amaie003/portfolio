@@ -17,8 +17,11 @@
 
 .main-contact_button{
     font-size:14pt;
-    margin-top: 2em;
+    margin-top: 1em;
     animation-duration: 2s;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
      animation-name: contactGlow;
      animation-iteration-count: infinite;
      animation-direction: alternate;
