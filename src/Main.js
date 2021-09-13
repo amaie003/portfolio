@@ -125,7 +125,7 @@ class Main extends Component {
           ))}
         </div>
 
-        <h4></h4>
+        
       </div>
     );
   };
@@ -136,7 +136,7 @@ class Main extends Component {
         {this.props.subTitle.map((key, index) => (
           <span key={index}>
             <span className="main-sub_title_element">{key}</span>
-            {index != this.props.subTitle.length - 1 && (
+            {index !== this.props.subTitle.length - 1 && (
               <span className="main-sub_title_seperater">|</span>
             )}
           </span>
@@ -228,6 +228,7 @@ class Main extends Component {
                     }
                     <div className="main-project-detail-display-img">
                       <img
+                        alt={project["title"]}
                         src={
                           require("" +
                             project["imgs"][this.state.selectedScreenShot])
@@ -267,7 +268,7 @@ class Main extends Component {
             </ul>
             <div className="main-project-detail-buttons">
               {project["links"].map((key,index)=>(
-                <a className="blue_button" target="_blank" key={"project-detail-button-"+index} href={key["url"]} >{key["title"]}</a>
+                <a className="blue_button" rel="noopener noreferrer" target="_blank" key={"project-detail-button-"+index} href={key["url"]} >{key["title"]}</a>
               ))
            
               }
@@ -306,8 +307,8 @@ class Main extends Component {
     var { work } = this.props;
     return (
       <div className="main-container" ref={(rf) => (this.scroller = rf)}>
-        <div className="main-main">
-          <a id="home"></a>
+        <div id="home" className="main-main">
+          
           <img
             className="main-bg"
             src={bgImg}
@@ -366,8 +367,8 @@ class Main extends Component {
             </a>
           </div>
         </div>
-        <div className="main-screen-block">
-          <a id="about"></a>
+        <div id="about" className="main-screen-block">
+          
           <div className="main-textBox">
             <div className="main-title-container">
               <div className="main-title">About</div>
@@ -424,8 +425,8 @@ class Main extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="main-work-body">
-                <a id="work"></a>
+              <div id="work" className="main-work-body">
+              
                 {this.state.selectedWork === 0 ||
                 this.state.selectedWork === undefined ||
                 this.state.selectedWork === null
@@ -441,8 +442,8 @@ class Main extends Component {
             this.state.selectedProject !== undefined &&
             this.projectDetail(this.state.projectDetail)}
           <div className="main-textBox">
-            <div className="main-title-container">
-              <a id="project"></a>
+            <div id="project" className="main-title-container">
+          
               <div className="main-title">Project</div>
               <div className="main-title-underline"></div>
             </div>

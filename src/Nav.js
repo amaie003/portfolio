@@ -1,4 +1,4 @@
-import { react, Component } from "react";
+import { Component } from "react";
 import "./styles/Nav.scss";
 import { AiFillGithub,AiFillLinkedin,AiOutlineMail,AiFillFacebook } from 'react-icons/ai';
 import { IconContext } from "react-icons";
@@ -23,20 +23,20 @@ class Nav extends Component {
 
           <a href="#work">Work</a>
           <a href="#project">Project</a>
-          <a href="mailto:amaie003@ucr.edu" target="_blank">Contact</a>
+          <a href="mailto:amaie003@ucr.edu" rel="noopener noreferrer"  target="_blank">Contact</a>
         </ul>
         <div className="nav-social">
         <IconContext.Provider value={{ size:"25px",className:"nav-social-items"}}>
-            <a href="mailto:amaie003@ucr.edu" target="_blank">
+            <a href="mailto:amaie003@ucr.edu" rel="noopener noreferrer" target="_blank">
             <AiOutlineMail/>
             </a>
-            <a href="https://www.linkedin.com/in/aierfan/" target="_blank">
+            <a href="https://www.linkedin.com/in/aierfan/" rel="noopener noreferrer" target="_blank">
             <AiFillLinkedin/>
             </a>
-            <a href="https://github.com/amaie003" target="_blank">
+            <a href="https://github.com/amaie003" rel="noopener noreferrer" target="_blank">
             <AiFillGithub />
             </a>
-            <a href="https://www.facebook.com/imefan" target="_blank">
+            <a href="https://www.facebook.com/imefan" rel="noopener noreferrer" target="_blank">
             <AiFillFacebook/>
             </a >
             </IconContext.Provider>
