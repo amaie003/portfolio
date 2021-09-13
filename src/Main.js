@@ -356,11 +356,11 @@ class Main extends Component {
               {this.props.mainTitle}{" "}
               <span className="main-title_name">{this.props.name}</span>{" "}
             </h1>
-            <br />
+           
             <h1 className="main-main_title">{this.props.mainTitleSub}</h1>
-            <br />
+           
             <h2 className="main-sub_title">{this.getsubTitle()}</h2>
-            <br />
+            
 
             <a href="mailto:amaie003@ucr.edu" className="main-contact_button blue_button">
               Email Me
