@@ -34,6 +34,7 @@ class Main extends Component {
   };
 
   componentWillUnmount = () => {
+   
     if (this.scroller) {
       this.scroller.removeEventListener(
         "scroll",
