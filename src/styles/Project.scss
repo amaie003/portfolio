@@ -8,7 +8,7 @@ width:100%;
 grid-column-gap:1em;
 grid-row-gap:1em;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
 
 }
 
@@ -232,3 +232,5 @@ opacity: 0;
         text-shadow: 0px 0px 3px rgba(255,255,255,0.5),0px 0px 15px $blue;
     }
   }
+
+ 

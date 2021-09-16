@@ -26,3 +26,15 @@
     grid-column: 2/3;
   
 }
+
+@media only screen and (max-width:1000px){
+    .nav{
+        display:none;
+    }
+    .app{
+
+        grid-template-columns: 0px 1fr;
+        grid-template-rows: 1fr;
+        
+    }
+  }

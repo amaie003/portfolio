@@ -28,9 +28,11 @@ class App extends Component {
   render(){
   return (
     <div className="app">
-      <Nav className="nav"
+     
+      <Nav 
       selectedView={this.state.selectedView}
       />
+
       <Main className="main"
       
       mainTitle={this.data["welcome"]["main_title"]}

@@ -82,13 +82,16 @@
 }
 .main-bg{
     display: block;
-    width: 125%;
+    width: 1600px;
     
     position: absolute;
-    top:-140%;
+    top:-1000px;
     left:0%;
     z-index: 1;
 }
+
+
+
 .main-title_name{
     text-shadow: 0.06em 0.06em 0 $blue,0.05em 0.05em 30px $blue;
 }
@@ -212,4 +215,43 @@ position: relative;
     }
   }
 
- 
+  @media only screen and (max-width: 1000px) {
+    .main-main_title{
+        letter-spacing: 0.1rem;
+        font-size:2rem;
+        }
+
+        .main-sub_title{
+            font-size:1rem;
+        }
+        .main-container{
+            overflow-y:scroll;
+            background-color:$mainBG;
+            position: relative;
+            scroll-behavior: smooth;
+            scroll-snap-type:none;
+            scroll-snap-points-y: repeat(100vh);
+          
+        
+        
+        }
+            
+
+  }
+
+  @media only screen and (min-width:930px) and (max-width:1099px){
+    .main-bg{
+        width: 1500px;
+        top:-900px;
+        left:-150px;
+    }
+  }
+
+  @media only screen and (max-width:930px){
+    .main-bg{
+        width: 1700px;
+        top:-1000px;
+        left:-360px;
+    }
+  }
+
