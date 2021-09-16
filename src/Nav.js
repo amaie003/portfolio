@@ -19,15 +19,15 @@ class Nav extends Component {
         </a>
 
         <ul className="nav-menu">
-          <a href="#about">About</a>
+          <a className={this.props.selectedView === 1 ? "nav-selected":"nav-menu-item"} href="#about">About</a>
 
-          <a href="#work">Work</a>
-          <a href="#project">Project</a>
-          <a href="mailto:amaie003@ucr.edu" rel="noopener noreferrer"  target="_blank">Contact</a>
+          <a className={this.props.selectedView === 2 ? "nav-selected":"nav-menu-item"} href="#work">Work</a>
+          <a className={this.props.selectedView === 3 ? "nav-selected":"nav-menu-item"} href="#project">Project</a>
+          <a className={this.props.selectedView === 4 ? "nav-selected":"nav-menu-item"}href="mailto:amaie003@ucr.edu" rel="noopener noreferrer"  target="_blank">Contact</a>
         </ul>
         <div className="nav-social">
         <IconContext.Provider value={{ size:"25px",className:"nav-social-items"}}>
-            <a href="mailto:amaie003@ucr.edu" rel="noopener noreferrer" target="_blank">
+            <a  href="mailto:amaie003@ucr.edu" rel="noopener noreferrer" target="_blank">
             <AiOutlineMail/>
             </a>
             <a href="https://www.linkedin.com/in/aierfan/" rel="noopener noreferrer" target="_blank">

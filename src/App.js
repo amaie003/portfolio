@@ -14,14 +14,23 @@ class App extends Component {
     this.data = portfolioData;
 
     this.state = {
-      
+      selectedView: 0
         }
   }
+  changeViewIndex=(i)=>{
+    this.setState({
+      selectedView:i
+
+    })
+  }
+  
   
   render(){
   return (
     <div className="app">
-      <Nav className="nav"/>
+      <Nav className="nav"
+      selectedView={this.state.selectedView}
+      />
       <Main className="main"
       
       mainTitle={this.data["welcome"]["main_title"]}
@@ -32,7 +41,7 @@ class App extends Component {
       specialties={this.data["about"]["specialties"]}
       work={this.data["work"]}
       projects = {this.data["projects"]}
-    
+      changeViewIndex = {this.changeViewIndex}
       />
     </div>
   );

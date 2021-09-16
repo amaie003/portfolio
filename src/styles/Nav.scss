@@ -27,6 +27,43 @@ box-shadow:0px 0px 5px rgba(0,0,0,0.5),0px 10px 10px rgba(0,0,0,0.3),0px 10px 15
     background-color: rgba(255,255,255,0.3);
     cursor: pointer;
 }
+
+.nav-selected{
+clear: both;
+float:left;
+width: 100%;
+text-decoration: none;
+padding: 1em 0;
+border-bottom: solid 1px gray;
+list-style-type: none;   
+display:block;
+color:white;
+box-shadow: $navShadow,0px -2px 2px rgba(69, 82, 201, 0.5) inset;
+
+
+animation-duration: 0.5s;
+  animation-name: fadeInSelected;
+  animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+@keyframes fadeInSelected {
+    from {
+      text-shadow: 
+      0px 0px 2px white,
+        
+       
+    }
+  
+    to {
+        text-shadow: 
+        0px 0px 2px white,
+        
+        
+        0px 0px 10px $blue,
+        0px 0px 15px $blue,
+        0px 0px 20px $blue;
+    }
+  }
 .nav-social a{
     padding-top:1em;
     padding-bottom:1em;
@@ -58,7 +95,7 @@ text-align: center;
 margin: 0;
 
 }
-.nav-menu a{
+.nav-menu-item{
     clear: both;
     float:left;
     width: 100%;
@@ -70,7 +107,7 @@ margin: 0;
     display:block;
     
 }
-.nav-menu a:hover{
+.nav-menu-item:hover{
 background-color: $gray-dark;
 color:white;
 box-shadow: $navShadow,0px -2px 2px rgba(69, 82, 201, 0.5) inset;

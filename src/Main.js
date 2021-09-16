@@ -51,6 +51,10 @@ class Main extends Component {
         shownSpecialty: true,
       });
     }
+    const current = Math.round(scrollTop/clientHeight)
+    if (current !== this.props.currentView){
+      this.props.changeViewIndex(current)
+    }
   };
   paragraphs = () => {
     return (
