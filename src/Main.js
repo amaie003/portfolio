@@ -441,13 +441,13 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        <div className="main-screen-block">
+        <div  id="project"className="main-screen-block">
           {this.state.selectedProject !== -1 &&
             this.state.selectedProject !== null &&
             this.state.selectedProject !== undefined &&
             this.projectDetail(this.state.projectDetail)}
           <div className="main-textBox">
-            <div id="project" className="main-title-container">
+            <div  className="main-title-container">
           
               <div className="main-title">Project</div>
               <div className="main-title-underline"></div>
