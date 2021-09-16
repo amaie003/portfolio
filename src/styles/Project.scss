@@ -234,4 +234,25 @@ opacity: 0;
     }
   }
 
+ @media only screen and (min-width:800px) and (max-width:1000px) {
+    .main-project-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    }
+
+ }
  
+ @media only screen and (min-width:600px) and (max-width:800px) {
+    .main-project-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    }
+
+ }
+ @media only screen and (max-width:600px) {
+    .main-project-container{
+    grid-template-columns: 1fr 1fr;
+    
+    }
+
+ }
