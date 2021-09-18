@@ -255,3 +255,28 @@ position: relative;
     }
   }
 
+
+  @media only screen and (min-width:1600px) and (max-width:1900px){
+    .main-bg{
+        width: 2000px;
+        top:-1200px;
+        left:-200px;
+    }
+        .main-main_title{
+        letter-spacing: 0.1rem;
+        font-size:5rem;
+        }
+
+        .main-sub_title{
+            font-size:2rem;
+        }
+  
+  }
+
+  @media only screen and (min-width:1901px){
+    .main-bg{
+        width: 2500px;
+        top:-1500px;
+        left:-200px;
+    }
+  }

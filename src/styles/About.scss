@@ -258,3 +258,12 @@ height:auto;
         
 
   }
+
+  @media only screen and (min-width:1601px){
+    .main-about-specialty-item h1{
+        font-size:1.5rem;
+    }
+    .main-about-specialty-item p{
+        font-size:1.3em;
+    }
+  }
