@@ -76,7 +76,7 @@ export const portfolioData = {
         "AWS, MySQL, REST API, JavaScript, React.js, Sass, HTML/CSS,Swift, Core Data, MVC",
       ],
       end: "June 2021",
-      imgs: ["./img/plancatcher1.png"],
+      imgs: ["./img/pc1.png","./img/pc2.png","./img/pc3.png","./img/pc4.png"],
       type: "Fullstack, Web App, iOS App",
       des: [
         "Web Version:",
